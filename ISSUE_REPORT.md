@@ -135,6 +135,7 @@ We have verified this by testing the same codebase in both versions of WebStorm.
 
 ## Additional Notes
 
-We've created a minimal reproduction repository to demonstrate these issues: [webstorm-imports-repro-2]
+We've created a minimal reproduction repository to demonstrate these
+issues: [webstorm-imports-repro-2](https://github.com/gdseck/webstorm-imports-repro)
 
 Thank you for your attention to these issues. We appreciate any assistance in resolving them.
