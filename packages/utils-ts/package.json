@@ -1,0 +1,50 @@
+{
+  "name": "@my-company/utils-ts",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
+  "exports": {
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "default": "./dist/core.js"
+    },
+    "./string": {
+      "types": "./dist/string.d.ts",
+      "default": "./dist/string.js"
+    },
+    "./array": {
+      "types": "./dist/array.d.ts",
+      "default": "./dist/array.js"
+    }
+  },
+  "imports": {
+    "#*": {
+      "default": "./lib/*",
+      "production": "./dist/*"
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "clean": "rimraf dist && rimraf *.tsbuildinfo",
+    "clean:deps": "rimraf node_modules",
+    "format": "biome format lib",
+    "format:fix": "pnpm format --write",
+    "lint": "biome lint lib",
+    "lint:fix": "pnpm lint --write",
+    "prebuild": "pnpm clean",
+    "types:check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@my-company/config-biome": "workspace:*",
+    "@my-company/config-typescript": "workspace:*",
+    "esbuild": "0.25.2",
+    "oxc-transform": "0.62.0",
+    "typescript": "^5.0.0",
+    "rimraf": "^5.0.0",
+    "unplugin-isolated-decl": "0.13.5"
+  }
+}

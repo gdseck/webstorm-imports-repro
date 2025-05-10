@@ -1,0 +1,30 @@
+{
+  "name": "my-company-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reproduction repository for WebStorm import path issue",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "clean": "pnpm -r clean",
+    "dev": "pnpm --filter @my-company/web dev",
+    "format": "pnpm -r format",
+    "format:fix": "pnpm -r format:fix",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "types:check": "pnpm -r types:check",
+    "validate": "pnpm -r validate"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "prettier": "3.5.3",
+    "prettier-plugin-multiline-arrays": "4.0.3",
+    "prettier-plugin-organize-imports": "4.1.0",
+    "prettier-plugin-sort-imports": "1.8.7",
+    "prettier-plugin-tailwindcss": "0.6.11"
+  }
+}

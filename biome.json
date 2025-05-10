@@ -1,0 +1,40 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "extends": ["./packages/config-biome/biome.json"],
+  "files": {
+    "include": [
+      "**/*.ts",
+      "**/*.d.ts",
+      "**/*.css",
+      "**/*.json",
+      "**/*.md",
+      "**/*.mjs"
+    ],
+    "ignore": ["dist"]
+  },
+  "overrides": [
+    {
+      "include": ["./packages/client-asyncapi/**/*.ts", "./apps/web/**/*.d.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["packages/client-openapi/lib/types.gen.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noVoidTypeReturn": "off"
+          },
+          "suspicious": {
+            "noConfusingVoidType": "off"
+          }
+        }
+      }
+    }
+  ]
+}

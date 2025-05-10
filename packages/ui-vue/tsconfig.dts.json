@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
+    "rootDir": "lib",
+    "target": "esnext"
+  },
+  "include": ["lib/**/*.ts", "lib/**/*.vue"],
+  "exclude": [
+    "dist",
+    "vite.config.ts"
+  ]
+}

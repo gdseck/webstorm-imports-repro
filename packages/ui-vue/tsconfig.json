@@ -1,0 +1,22 @@
+{
+  "extends": "@my-company/config-typescript/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "isolatedModules": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "esnext",
+    "outDir": "dist",
+    "paths": {
+      "#*": ["./lib/*"]
+    },
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "types": ["node", "vue"]
+  },
+  "include": [
+    "lib",
+    "vite.config.ts"
+  ],
+  "exclude": ["dist"]
+}

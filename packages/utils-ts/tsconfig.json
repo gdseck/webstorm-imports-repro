@@ -1,0 +1,20 @@
+{
+  "extends": "@my-company/config-typescript/base.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "alwaysStrict": false,
+    "baseUrl": ".",
+    "declarationMap": true,
+    "isolatedDeclarations": true,
+    "isolatedModules": true,
+    "paths": {
+      "#*": ["./lib/*"]
+    },
+    "resolveJsonModule": true,
+    "types": ["node"]
+  },
+  "include": [
+    "lib"
+  ],
+  "exclude": ["dist", "node_modules"]
+}

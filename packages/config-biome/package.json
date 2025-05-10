@@ -1,0 +1,14 @@
+{
+  "name": "@my-company/config-biome",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/my-company-monorepo.git"
+  },
+  "exports": {
+    ".": "./biome.json",
+    "./biome": "./biome.json"
+  }
+}
